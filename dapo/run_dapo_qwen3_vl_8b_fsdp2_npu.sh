@@ -98,8 +98,8 @@ echo "ref_log_prob_ppo_max_token_len: $ref_log_prob_ppo_max_token_len"
 python3 -m recipe.dapo.main_dapo \
     algorithm.adv_estimator=grpo \
     algorithm.filter_groups.enable=${filter_groups_enable} \
-    algorithm.filter_groups.max_num_gen_batches=${max_num_gen_batches) \
-    algorithm.filter_groups.metric=$(filter_groups_metric}\
+    algorithm.filter_groups.max_num_gen_batches=${max_num_gen_batches} \
+    algorithm.filter_groups.metric=${filter_groups_metric}\
     algorithm.use_kl_in_reward=${use_kl_in_reward} \
     algorithm.kl_ctrl.kl_coef=${kl_coef} \
     data.train_files=$data_path/train.parquet \
@@ -154,7 +154,7 @@ python3 -m recipe.dapo.main_dapo \
     actor_rollout_ref.rollout.val_kwargs.n=1 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=$log_prob_micro_batch_size_per_gpu \
     reward_model.reward_manager=dapo \
-    reward_model.overlong_buffer.enable-${overlong_buffer_enable} \
+    reward_model.overlong_buffer.enable=${overlong_buffer_enable} \
     reward_model.overlong_buffer.len=${overlong_buffer_len} \
     reward_model.overlong_buffer.penalty_factor=${overlong_buffer_penalty_factor} \
     trainer.critic_warmup=0 \
