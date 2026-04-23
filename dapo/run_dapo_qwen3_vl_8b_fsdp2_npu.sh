@@ -99,7 +99,7 @@ python3 -m recipe.dapo.main_dapo \
     algorithm.adv_estimator=grpo \
     algorithm.filter_groups.enable=${filter_groups_enable} \
     algorithm.filter_groups.max_num_gen_batches=${max_num_gen_batches} \
-    algorithm.filter_groups.metric=${filter_groups_metric}\
+    algorithm.filter_groups.metric=${filter_groups_metric} \
     algorithm.use_kl_in_reward=${use_kl_in_reward} \
     algorithm.kl_ctrl.kl_coef=${kl_coef} \
     data.train_files=$data_path/train.parquet \
