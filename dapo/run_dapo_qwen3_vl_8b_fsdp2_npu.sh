@@ -173,9 +173,9 @@ python3 -m recipe.dapo.main_dapo \
     actor_rollout_ref.actor.entropy_from_logits_with_chunking=True \
     actor_rollout_ref.ref.entropy_from_logits_with_chunking=True \
     actor_rollout_ref.actor.use_dynamic_bsz=${use_dynamic_bsz} \
-    actor rollout_ref.ref.log_prob_use_dynamic_bsz=${use_dynamic_bsz} \
-    actor rollout_ref.rollout.log_prob_use_dynamic_bsz=${use_dynamic_bsz} \
-    actor rollout_ref.actor.ppo_max_token_len_per_gpu=${actor_ppo_max_token_len} \
-    actor rollout_ref.ref.log_prob_max_token_len_per_gpu=${ref_log_prob_ppo_max_token_len} \
+    actor_rollout_ref.ref.log_prob_use_dynamic_bsz=${use_dynamic_bsz} \
+    actor_rollout_ref.rollout.log_prob_use_dynamic_bsz=${use_dynamic_bsz} \
+    actor_rollout_ref.actor.ppo_max_token_len_per_gpu=${actor_ppo_max_token_len} \
+    actor_rollout_ref.ref.log_prob_max_token_len_per_gpu=${ref_log_prob_ppo_max_token_len} \
     actor_rollout_ref.rollout.max_model_len=$((max_prompt_length + max_response_length)) \
     actor_rollout_ref.rollout.max_num_batched_tokens=$max_num_batched_tokens
